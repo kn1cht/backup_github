@@ -46,6 +46,7 @@ for url in clone_urls:
             print(f'[{repo_path}] clone failed')
 
     repo = git.Repo(f'{clone_dir}{repo_path}')
+    repo.git.checkout('HEAD', '--force')
     info = repo.remote().pull()[0]
     if info.old_commit is not None:
         print(f'[{repo_path}] performed git pull: {info.old_commit}...{info.ref}')
