@@ -11,7 +11,7 @@ from github import Github
 load_dotenv()
 github_token = os.getenv('GITHUB_TOKEN')
 clone_dir = (os.getenv('CLONE_DIR') +'/').replace('//', '/')
-with open('repository_settings.json') as f:
+with open(os.path.join(os.path.dirname(__file__), 'repository_settings.json')) as f:
     repos = json.load(f)
 
 ###### prepare github client ######
