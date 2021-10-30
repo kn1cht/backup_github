@@ -1,0 +1,14 @@
+{
+  "orgs" : [
+    {
+      "name" : "github",
+      "patterns" : [
+        "github.com",
+        "^gh-"
+      ]
+    },
+    {
+      "name" : "bitcoin"
+    }
+  ]
+}
